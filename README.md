@@ -21,3 +21,10 @@ UNSPLASH_KEY=2MJvApIkV13hfg2LmQlneILfHoJ2ttlzSdPKefGOyKM
 ```
 
 - Save modified **.env.local** file
+
+
+## Initial configuration api 
+
+```
+activate pipenv with cmd  : pipenv shell
+run api wih cmd : python main.my
