@@ -28,3 +28,8 @@ UNSPLASH_KEY=2MJvApIkV13hfg2LmQlneILfHoJ2ttlzSdPKefGOyKM
 ```
 activate pipenv with cmd  : pipenv shell
 run api wih cmd : python main.my
+
+## Initial Mongodb 
+
+```
+create database and collection in mongo -> insert user_IP , password and collection name in api/main.py

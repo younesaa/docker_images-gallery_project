@@ -3,6 +3,17 @@ import requests
 from flask import Flask, request
 from dotenv import load_dotenv
 from flask_cors import CORS
+from pymongo import MongoClient
+
+# Connect to MongoDB
+client = MongoClient("mongodb://root:examplePassword@mongo:27017/")
+
+# Access a database
+db = client.UNSPLASHAPI
+
+# Access a collection
+collection = db.Images
+
 
 load_dotenv(dotenv_path="./.env.local")
 
@@ -29,6 +40,10 @@ def new_image():
     response = requests.get(url=UNSPLASH_URL, headers=headers, params=params)
 
     data = response.json()
+    dataTostore = response.json()
+
+    # Insert the document into the collection
+    collection.insert_one(dataTostore)
     return data
 
 
